@@ -1411,16 +1411,33 @@
             })
         }
         var P = s(89677);
-        function R(e) {
-            var t, s;
-            let {presenceInformation: r, font: n, fontSize: i, description: c, discordUserBadges: l, discordData: d} = e
-              , u = {
-                0: "Playing",
-                1: "Streaming",
-                2: "Listening to",
-                3: "Watching",
-                5: "Competing"
-            }
+function R(e) {
+    var t, s;
+    let { presenceInformation: r, font: n, fontSize: i, description: c, discordUserBadges: l, discordData: d } = e;
+
+    // ✅ Umesto direktnog menjanja - napravi kopiju sa override
+    r = {
+        ...r,
+        success: true,
+        username: "le0n_21",
+        avatar: "https://cdn.discordapp.com/avatars/953774296851943469/77238248f3e2c2d2e12470560c04fd7d.webp"
+    };
+
+    let u = {
+            0: "Playing",
+            1: "Streaming",
+            2: "Listening to",
+            3: "Watching",
+            5: "Competing"
+        },
+        m = r.activities,
+        p = m && m[0],
+        h = m && m.find(e => "Spotify" === e.name),
+        g = f({
+            font: n,
+            fontSize: i
+        });
+
               , m = r.activities
               , p = m && m[0]
               , h = m && m.find(e => "Spotify" === e.name)
