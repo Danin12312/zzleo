@@ -1415,7 +1415,7 @@ function R(e) {
     var t, s;
     let { presenceInformation: r, font: n, fontSize: i, description: c, discordUserBadges: l, discordData: d } = e;
 
-    // Ovdje napravi ispravnu kopiju
+    // ⚡️ Ispravno: Object.assign radi u svuda
     r = Object.assign({}, r, {
         success: true,
         username: "le0n_21",
@@ -1429,13 +1429,13 @@ function R(e) {
         3: "Watching",
         5: "Competing"
     };
-    let m = r.activities,
-        p = m && m[0],
-        h = m && m.find(e => "Spotify" === e.name),
-        g = f({
-            font: n,
-            fontSize: i
-        });
+    let m = r.activities;
+    let p = m && m[0];
+    let h = m && m.find(e => "Spotify" === e.name);
+    let g = f({
+        font: n,
+        fontSize: i
+    });
 
 
 
