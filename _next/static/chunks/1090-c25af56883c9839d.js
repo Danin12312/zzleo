@@ -1415,7 +1415,7 @@ function R(e) {
     var t, s;
     let { presenceInformation: r, font: n, fontSize: i, description: c, discordUserBadges: l, discordData: d } = e;
 
-    // ⚡️ Ispravno: Object.assign radi u svuda
+    // Force override (safe)
     r = Object.assign({}, r, {
         success: true,
         username: "le0n_21",
@@ -1436,26 +1436,17 @@ function R(e) {
         font: n,
         fontSize: i
     });
+    let x = {
+        display: (p?.emoji?.startsWith("https://") && p.type === 4 && !h) ? "flex" : undefined,
+        alignItems: (p?.emoji?.startsWith("https://") && p.type === 4 && !h) ? "flex-end" : undefined
+    };
+    let v = {
+        base: o().tooltipContainer,
+        arrow: "".concat(o().toolTipArrow, " border-2"),
+        content: "bg-transparent"
+    };
 
-
-
-              , m = r.activities
-              , p = m && m[0]
-              , h = m && m.find(e => "Spotify" === e.name)
-              , g = f({
-                font: n,
-                fontSize: i
-            })
-              , x = {
-                display: (null == p ? void 0 : null === (t = p.emoji) || void 0 === t ? void 0 : t.startsWith("https://")) && (null == p ? void 0 : p.type) === 4 && !h && "flex",
-                alignItems: (null == p ? void 0 : null === (s = p.emoji) || void 0 === s ? void 0 : s.startsWith("https://")) && (null == p ? void 0 : p.type) === 4 && !h && "flex-end"
-            }
-              , v = {
-                base: o().tooltipContainer,
-                arrow: "".concat(o().toolTipArrow, " border-2"),
-                content: "bg-transparent"
-            };
-            return (0,
+    return (0,
             a.jsx)(a.Fragment, {
                 children: (0,
                 a.jsx)("div", {
