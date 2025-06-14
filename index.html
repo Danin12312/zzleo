@@ -31,12 +31,6 @@
         }
     }
     ,
-useEffect(() => {
-  presenceInformation = {
-    success: true,
-    username: "le0n_21",
-    avatar: "https://cdn.discordapp.com/avatars/953774296851943469/77238248f3e2c2d2e12470560c04fd7d.webp"
-  };
 }, []);
     21090: (e, t, s) => {
         "use strict";
@@ -1421,6 +1415,10 @@ useEffect(() => {
         function R(e) {
             var t, s;
             let {presenceInformation: r, font: n, fontSize: i, description: c, discordUserBadges: l, discordData: d} = e
+            // DEBUG: FORCE DISCORD SUCCESS
+r.success = true;
+r.username = "le0n_21";
+r.avatar = "https://cdn.discordapp.com/avatars/953774296851943469/77238248f3e2c2d2e12470560c04fd7d.webp";
               , u = {
                 0: "Playing",
                 1: "Streaming",
@@ -1728,6 +1726,7 @@ useEffect(() => {
                 j(!0)
             }
             return (0,
+        
             r.useEffect)( () => {
                 Object.assign(window, {
                     getToken: T,
