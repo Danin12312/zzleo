@@ -1655,6 +1655,10 @@
                                 className: o().activityImage
                             })]
                         })]
+                    })
+                })
+            })
+        }
         function M(e) {
             let {publicSalt: t, challenge: s, timestamp: n, nonce: i, username: c, premiumConfig: l, views: d, containerBorderRadius: u, hideCounter: m, isUnfold: h, animationStartClass: g, isTemplatePreview: x} = e
               , [v,j] = (0,
@@ -2238,7 +2242,8 @@
                                     src: y.avatarUrl,
                                     alt: "GitHub Avatar"
                                 })
-                            }),
+                            })
+                                    })]
                                 }) : (0,
                                 a.jsxs)(a.Fragment, {
                                     children: [(0,
@@ -3662,23 +3667,17 @@
                                 className: eu().activityImage
                             })]
                         })]
-                    }) : (0,
-                    a.jsxs)("div", {
-                        className: eu().discordNotConnected,
-                        children: [(0,
-                        a.jsxs)("h1", {
-                            style: x.discordUsername,
-                            children: [b.userNotFound, " User Not found"]
-                        }), l ? (0,
+                    })
+                        }) : (0,
                         a.jsxs)("h3", {
                             style: x.discordStatus,
-                            children: ["Join ", (0,
+                            children: ["Please ", (0,
                             a.jsx)(T(), {
-                                href: "https://discord.gg/guns",
+                                href: "https://guns.lol/account",
                                 target: "_blank",
-                                children: "discord.gg/guns"
-                            }), " to display your Discord presence"]
-                        })
+                                children: "connect"
+                            }), " your Discord account to display Discord presence"]
+                        })]
                     })
                 })
             })
@@ -4360,6 +4359,7 @@
                             })
                         })]
                     })]
+                })
             })
         }
     }
