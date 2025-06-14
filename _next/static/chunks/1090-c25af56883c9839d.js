@@ -1655,36 +1655,6 @@
                                 className: o().activityImage
                             })]
                         })]
-                    }) : (0,
-                    a.jsxs)("div", {
-                        className: o().discordNotConnected,
-                        children: [(0,
-                        a.jsxs)("h1", {
-                            style: g.discordUsername,
-                            children: [b.userNotFound, " User Not found"]
-                        }), d ? (0,
-                        a.jsxs)("h3", {
-                            style: g.discordStatus,
-                            children: ["Join ", (0,
-                            a.jsx)(T(), {
-                                href: "https://discord.gg/guns",
-                                target: "_blank",
-                                children: "discord.gg/guns"
-                            }), " to display your status"]
-                        }) : (0,
-                        a.jsxs)("h3", {
-                            style: g.discordStatus,
-                            children: ["Please ", (0,
-                            a.jsx)(T(), {
-                                href: "https://guns.lol/account",
-                                target: "_blank",
-                                children: "connect"
-                            }), " your Discord account"]
-                        })]
-                    })
-                })
-            })
-        }
         function M(e) {
             let {publicSalt: t, challenge: s, timestamp: n, nonce: i, username: c, premiumConfig: l, views: d, containerBorderRadius: u, hideCounter: m, isUnfold: h, animationStartClass: g, isTemplatePreview: x} = e
               , [v,j] = (0,
@@ -2268,23 +2238,7 @@
                                     src: y.avatarUrl,
                                     alt: "GitHub Avatar"
                                 })
-                            }), (0,
-                            a.jsxs)("div", {
-                                className: x().githubInformation,
-                                children: [y.error ? (0,
-                                a.jsxs)(a.Fragment, {
-                                    children: [(0,
-                                    a.jsx)("h1", {
-                                        style: v.secondTabWidgetHeading,
-                                        children: "Unknown"
-                                    }), (0,
-                                    a.jsx)("h3", {
-                                        style: v.secondTabWidgetDescription,
-                                        children: (0,
-                                        a.jsx)("span", {
-                                            children: "User not found."
-                                        })
-                                    })]
+                            }),
                                 }) : (0,
                                 a.jsxs)(a.Fragment, {
                                     children: [(0,
@@ -3724,16 +3678,7 @@
                                 target: "_blank",
                                 children: "discord.gg/guns"
                             }), " to display your Discord presence"]
-                        }) : (0,
-                        a.jsxs)("h3", {
-                            style: x.discordStatus,
-                            children: ["Please ", (0,
-                            a.jsx)(T(), {
-                                href: "https://guns.lol/account",
-                                target: "_blank",
-                                children: "connect"
-                            }), " your Discord account to display Discord presence"]
-                        })]
+                        })
                     })
                 })
             })
@@ -4415,15 +4360,6 @@
                             })
                         })]
                     })]
-                }) : (null === (d = m.error) || void 0 === d ? void 0 : d.toLowerCase()) === "user not found" ? (0,
-                a.jsx)(ea, {
-                    username: S
-                }) : m.error ? (0,
-                a.jsx)(er, {}) : !0 === m.ban ? (0,
-                a.jsx)(en, {
-                    reason: m.ban_reason
-                }) : !m.verified && (0,
-                a.jsx)(eo, {})]
             })
         }
     }
