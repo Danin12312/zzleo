@@ -1656,7 +1656,7 @@
                             })]
                         })]
                     })
-                          ) : null
+                          : null
 ); // <--- THIS semicolon or closure is necessary
 
 function M(e) {
