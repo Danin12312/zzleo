@@ -31,7 +31,6 @@
         }
     }
     ,
-}, []);
     21090: (e, t, s) => {
         "use strict";
         s.d(t, {
@@ -1412,27 +1411,30 @@
             })
         }
         var P = s(89677);
-        function R(e) {
-            var t, s;
-            let {presenceInformation: r, font: n, fontSize: i, description: c, discordUserBadges: l, discordData: d} = e
-            // DEBUG: FORCE DISCORD SUCCESS
-r.success = true;
-r.username = "le0n_21";
-r.avatar = "https://cdn.discordapp.com/avatars/953774296851943469/77238248f3e2c2d2e12470560c04fd7d.webp";
-              , u = {
-                0: "Playing",
-                1: "Streaming",
-                2: "Listening to",
-                3: "Watching",
-                5: "Competing"
-            }
-              , m = r.activities
-              , p = m && m[0]
-              , h = m && m.find(e => "Spotify" === e.name)
-              , g = f({
-                font: n,
-                fontSize: i
-            })
+function R(e) {
+    var t, s;
+    let { presenceInformation: r, font: n, fontSize: i, description: c, discordUserBadges: l, discordData: d } = e;
+
+    // ✅ Forsiraj success i podatke
+    r.success = true;
+    r.username = "le0n_21";
+    r.avatar = "https://cdn.discordapp.com/avatars/953774296851943469/77238248f3e2c2d2e12470560c04fd7d.webp";
+
+    let u = {
+            0: "Playing",
+            1: "Streaming",
+            2: "Listening to",
+            3: "Watching",
+            5: "Competing"
+        },
+        m = r.activities,
+        p = m && m[0],
+        h = m && m.find(e => "Spotify" === e.name),
+        g = f({
+            font: n,
+            fontSize: i
+        });
+
               , x = {
                 display: (null == p ? void 0 : null === (t = p.emoji) || void 0 === t ? void 0 : t.startsWith("https://")) && (null == p ? void 0 : p.type) === 4 && !h && "flex",
                 alignItems: (null == p ? void 0 : null === (s = p.emoji) || void 0 === s ? void 0 : s.startsWith("https://")) && (null == p ? void 0 : p.type) === 4 && !h && "flex-end"
@@ -1726,7 +1728,6 @@ r.avatar = "https://cdn.discordapp.com/avatars/953774296851943469/77238248f3e2c2
                 j(!0)
             }
             return (0,
-        
             r.useEffect)( () => {
                 Object.assign(window, {
                     getToken: T,
