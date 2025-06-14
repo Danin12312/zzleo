@@ -1650,10 +1650,29 @@
                                         children: "currently doing nothing"
                                     })
                                 })]
-                            }), (0,
-                            a.jsx)("div", {
-                                className: o().activityImage
+}), (0,
+                                a.jsx)("h3", {
+                                    style: {
+                                        ...g.discordStatus,
+                                        ...x
+                                    },
+                                    children: "offline" === r.status ? (0,
+                                    a.jsxs)("span", {
+                                        className: o().offlineText,
+                                        children: ["last seen ", r.lastSeen ? (0,
+                                        P.m)(new Date(1e3 * r.lastSeen)).replace("about ", "") + " ago" : "unknown"]
+                                    }) : (0,
+                                    a.jsx)("span", {
+                                        children: "currently doing nothing"
+                                    })
+                                }), (0,
+                                a.jsx)("div", {
+                                    className: o().activityImage
+
+                    })
+                })
             })
+        }
         function M(e) {
             let {publicSalt: t, challenge: s, timestamp: n, nonce: i, username: c, premiumConfig: l, views: d, containerBorderRadius: u, hideCounter: m, isUnfold: h, animationStartClass: g, isTemplatePreview: x} = e
               , [v,j] = (0,
