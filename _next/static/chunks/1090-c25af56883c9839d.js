@@ -1650,29 +1650,12 @@
                                         children: "currently doing nothing"
                                     })
                                 })]
-}), (0,
-                                a.jsx)("h3", {
-                                    style: {
-                                        ...g.discordStatus,
-                                        ...x
-                                    },
-                                    children: "offline" === r.status ? (0,
-                                    a.jsxs)("span", {
-                                        className: o().offlineText,
-                                        children: ["last seen ", r.lastSeen ? (0,
-                                        P.m)(new Date(1e3 * r.lastSeen)).replace("about ", "") + " ago" : "unknown"]
-                                    }) : (0,
-                                    a.jsx)("span", {
-                                        children: "currently doing nothing"
-                                    })
-                                }), (0,
-                                a.jsx)("div", {
-                                    className: o().activityImage
-
+                            }), (0,
+                            a.jsx)("div", {
+                                className: o().activityImage
+                            })]
+                        })]
                     })
-                })
-            })
-        }
         function M(e) {
             let {publicSalt: t, challenge: s, timestamp: n, nonce: i, username: c, premiumConfig: l, views: d, containerBorderRadius: u, hideCounter: m, isUnfold: h, animationStartClass: g, isTemplatePreview: x} = e
               , [v,j] = (0,
@@ -2256,7 +2239,22 @@
                                     src: y.avatarUrl,
                                     alt: "GitHub Avatar"
                                 })
-                            })
+                            }), (0,
+                            a.jsxs)("div", {
+                                className: x().githubInformation,
+                                children: [y.error ? (0,
+                                a.jsxs)(a.Fragment, {
+                                    children: [(0,
+                                    a.jsx)("h1", {
+                                        style: v.secondTabWidgetHeading,
+                                        children: "Unknown"
+                                    }), (0,
+                                    a.jsx)("h3", {
+                                        style: v.secondTabWidgetDescription,
+                                        children: (0,
+                                        a.jsx)("span", {
+                                            children: "User not found."
+                                        })
                                     })]
                                 }) : (0,
                                 a.jsxs)(a.Fragment, {
@@ -3681,7 +3679,22 @@
                                 className: eu().activityImage
                             })]
                         })]
-                    })
+                    }) : (0,
+                    a.jsxs)("div", {
+                        className: eu().discordNotConnected,
+                        children: [(0,
+                        a.jsxs)("h1", {
+                            style: x.discordUsername,
+                            children: [b.userNotFound, " User Not found"]
+                        }), l ? (0,
+                        a.jsxs)("h3", {
+                            style: x.discordStatus,
+                            children: ["Join ", (0,
+                            a.jsx)(T(), {
+                                href: "https://discord.gg/guns",
+                                target: "_blank",
+                                children: "discord.gg/guns"
+                            }), " to display your Discord presence"]
                         }) : (0,
                         a.jsxs)("h3", {
                             style: x.discordStatus,
@@ -4373,7 +4386,15 @@
                             })
                         })]
                     })]
-                })
+                }) : (null === (d = m.error) || void 0 === d ? void 0 : d.toLowerCase()) === "user not found" ? (0,
+                a.jsx)(ea, {
+                    username: S
+                }) : m.error ? (0,
+                a.jsx)(er, {}) : !0 === m.ban ? (0,
+                a.jsx)(en, {
+                    reason: m.ban_reason
+                }) : !m.verified && (0,
+                a.jsx)(eo, {})]
             })
         }
     }
