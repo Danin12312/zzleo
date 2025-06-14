@@ -1653,11 +1653,7 @@
                             }), (0,
                             a.jsx)("div", {
                                 className: o().activityImage
-                       ]
-                    })
-                })
             })
-        }
         function M(e) {
             let {publicSalt: t, challenge: s, timestamp: n, nonce: i, username: c, premiumConfig: l, views: d, containerBorderRadius: u, hideCounter: m, isUnfold: h, animationStartClass: g, isTemplatePreview: x} = e
               , [v,j] = (0,
