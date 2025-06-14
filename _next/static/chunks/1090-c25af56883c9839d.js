@@ -1413,30 +1413,21 @@
         var P = s(89677);
 function R(e) {
     var t, s;
-    let { presenceInformation: r, font: n, fontSize: i, description: c, discordUserBadges: l, discordData: d } = e;
-
-    // ✅ Umesto direktnog menjanja - napravi kopiju sa override
-    r = {
-        ...r,
-        success: true,
-        username: "le0n_21",
-        avatar: "https://cdn.discordapp.com/avatars/953774296851943469/77238248f3e2c2d2e12470560c04fd7d.webp"
-    };
-
-    let u = {
+    let { presenceInformation: r, font: n, fontSize: i, description: c, discordUserBadges: l, discordData: d } = e,
+        u = {
             0: "Playing",
             1: "Streaming",
             2: "Listening to",
             3: "Watching",
             5: "Competing"
-        },
+        }
         m = r.activities,
         p = m && m[0],
         h = m && m.find(e => "Spotify" === e.name),
         g = f({
             font: n,
             fontSize: i
-        });
+        })
 
               , m = r.activities
               , p = m && m[0]
@@ -1672,11 +1663,36 @@ function R(e) {
                                 className: o().activityImage
                             })]
                         })]
+                    }) : (0,
+                    a.jsxs)("div", {
+                        className: o().discordNotConnected,
+                        children: [(0,
+                        a.jsxs)("h1", {
+                            style: g.discordUsername,
+                            children: [b.userNotFound, " User Not found"]
+                        }), d ? (0,
+                        a.jsxs)("h3", {
+                            style: g.discordStatus,
+                            children: ["Join ", (0,
+                            a.jsx)(T(), {
+                                href: "https://discord.gg/guns",
+                                target: "_blank",
+                                children: "discord.gg/guns"
+                            }), " to display your status"]
+                        }) : (0,
+                        a.jsxs)("h3", {
+                            style: g.discordStatus,
+                            children: ["Please ", (0,
+                            a.jsx)(T(), {
+                                href: "https://guns.lol/account",
+                                target: "_blank",
+                                children: "connect"
+                            }), " your Discord account"]
+                        })]
                     })
-                          : null
-); // <--- THIS semicolon or closure is necessary
-
-function M(e) {
+                })
+            })
+        }
         function M(e) {
             let {publicSalt: t, challenge: s, timestamp: n, nonce: i, username: c, premiumConfig: l, views: d, containerBorderRadius: u, hideCounter: m, isUnfold: h, animationStartClass: g, isTemplatePreview: x} = e
               , [v,j] = (0,
